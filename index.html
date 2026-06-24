@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriSustain - Sustainable Agriculture Information System</title>
+    <meta name="description" content="Empowering farmers with organic farming techniques, soil testing recommendations, government schemes, and AI assistance.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriSustain</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#organic" class="nav-link">Organic Farming</a>
+                <a href="#soil" class="nav-link">Soil Testing</a>
+                <a href="#schemes" class="nav-link">Government Schemes</a>
+            </nav>
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+                <a href="#soil" class="cta-header-btn">Analyze Soil</a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#hero" class="mobile-nav-link">Home</a>
+        <a href="#organic" class="mobile-nav-link">Organic Farming</a>
+        <a href="#soil" class="mobile-nav-link">Soil Testing</a>
+        <a href="#schemes" class="mobile-nav-link">Government Schemes</a>
+        <a href="#soil" class="mobile-nav-link mobile-cta">Analyze Soil</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="badge">Eco-Friendly & Smart Agriculture</span>
+                <h1>Cultivating a Greener <span class="highlight">Tomorrow</span></h1>
+                <p>Welcome to AgriSustain, the digital portal for sustainable farming. Discover organic farming techniques, get scientific recommendations based on your soil test reports, search government schemes, and consult our Azure-integrated AI assistant.</p>
+                <div class="hero-cta-group">
+                    <a href="#soil" class="btn btn-primary">Start Soil Analysis</a>
+                    <a href="#organic" class="btn btn-secondary">Explore Organic Methods</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-lbl">Organic Focused</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">50+</span>
+                        <span class="stat-lbl">Soil Recommendations</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-lbl">Azure AI Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="image-wrapper glass">
+                    <img id="heroImage" src="assets/agri_hero_banner.png" alt="Modern Sustainable Farm Banner" onerror="this.src='https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80'">
+                    <div class="visual-badge top-right glass-card">
+                        <span class="badge-dot pulse"></span>
+                        <span class="badge-txt">Soil Quality Analyser: Active</span>
+                    </div>
+                    <div class="visual-badge bottom-left glass-card">
+                        <span class="badge-icon">🤖</span>
+                        <span class="badge-txt">AI AgriBot Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Organic Farming Section -->
+        <section id="organic" class="section organic-section">
+            <div class="section-header">
+                <span class="section-tag">Empowering Methods</span>
+                <h2>Organic Farming Practices</h2>
+                <p class="section-subtitle">Transitioning to organic practices improves crop nutrition, preserves biodiversity, and builds soil structure.</p>
+            </div>
+
+            <div class="organic-grid">
+                <!-- Composting Card -->
+                <div class="organic-card glass-card">
+                    <div class="card-icon">🪱</div>
+                    <h3>Composting & Vermicomposting</h3>
+                    <p>Convert farm waste into nutrient-rich black gold. Composting increases soil organic matter, improves water retention, and populates the soil with beneficial microbes.</p>
+                    <ul class="card-list">
+                        <li><strong>Green Waste:</strong> Nitrogen rich (leaves, stalks, peels)</li>
+                        <li><strong>Brown Waste:</strong> Carbon rich (straw, woodchips, paper)</li>
+                        <li><strong>Vermicomposting:</strong> Utilizes earthworms to speed decomposition</li>
+                    </ul>
+                </div>
+
+                <!-- Crop Rotation Card -->
+                <div class="organic-card glass-card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Smart Crop Rotation</h3>
+                    <p>Prevent pests and crop disease cycle by shifting planting families. Alternating nitrogen-demanding crops with nitrogen-fixing plants naturally builds soil fertility.</p>
+                    <ul class="card-list">
+                        <li><strong>Nitrogen Fixers:</strong> Legumes, beans, peas</li>
+                        <li><strong>Heavy Feeders:</strong> Maize, wheat, brassicas</li>
+                        <li><strong>Root Crops:</strong> Carrots, potatoes, beets</li>
+                    </ul>
+                </div>
+
+                <!-- Bio-pest Control Card -->
+                <div class="organic-card glass-card">
+                    <div class="card-icon">🐞</div>
+                    <h3>Bio-Pesticides & Bio-Fertilizers</h3>
+                    <p>Protect crops using nature's defenses instead of synthetic poisons. Implement biological barriers, trap crops, and natural formulations.</p>
+                    <ul class="card-list">
+                        <li><strong>Neem Formulations:</strong> Repels over 200 chewing pests</li>
+                        <li><strong>Trichoderma:</strong> Fungi protecting roots from diseases</li>
+                        <li><strong>Rhizobium:</strong> Soil bacteria fixing atmospheric nitrogen</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Interactive Crop Yield & Conversion Estimator -->
+            <div class="interactive-container glass-card">
+                <div class="interactive-header">
+                    <h3>Organic Conversion & Yield Estimator</h3>
+                    <p>Estimate chemical-to-organic transition outcomes based on crop type and farm acreage.</p>
+                </div>
+                <div class="estimator-form">
+                    <div class="form-group">
+                        <label for="cropSelect">Select Major Crop</label>
+                        <select id="cropSelect" class="styled-select">
+                            <option value="wheat">Wheat (Grain)</option>
+                            <option value="rice">Rice (Paddy)</option>
+                            <option value="maize">Maize (Corn)</option>
+                            <option value="potato">Potato</option>
+                            <option value="pulses">Pulses / Beans</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="acreageInput">Farm Area (in Acres)</label>
+                        <input type="number" id="acreageInput" min="1" max="1000" value="5" class="styled-input">
+                    </div>
+                    <div class="form-group btn-container">
+                        <button id="calculateYieldBtn" class="btn btn-primary">Estimate Yields</button>
+                    </div>
+                </div>
+                <div id="yieldResults" class="estimator-results hidden">
+                    <div class="results-grid">
+                        <div class="result-block">
+                            <span class="result-lbl">Transition Period (Soil Detox)</span>
+                            <span class="result-val highlight" id="detoxVal">3 Years</span>
+                        </div>
+                        <div class="result-block">
+                            <span class="result-lbl">Organic Yield Target (Tons/Yr)</span>
+                            <span class="result-val" id="organicYieldVal">0.0 Tons</span>
+                        </div>
+                        <div class="result-block">
+                            <span class="result-lbl">Expected Cost Savings (Fertilizers)</span>
+                            <span class="result-val success-text" id="savingsVal">$0.00</span>
+                        </div>
+                    </div>
+                    <div class="results-guideline alert-box info">
+                        <span class="alert-icon">💡</span>
+                        <p id="yieldGuideline">During transition years, yield may decline up to 10% before bouncing back stronger with enhanced organic premium market prices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soil Testing Section -->
+        <section id="soil" class="section soil-section">
+            <div class="section-header">
+                <span class="section-tag">Scientific Testing</span>
+                <h2>Soil Test Recommendation Engine</h2>
+                <p class="section-subtitle">Soil testing evaluates available macronutrients (N, P, K) and soil acidity (pH) to recommend custom organic amendments.</p>
+            </div>
+
+            <div class="soil-grid">
+                <!-- Input Panel -->
+                <div class="soil-form-panel glass-card">
+                    <h3>Enter Your Soil Test Values</h3>
+                    <p>Enter the nutrient ratings (Low, Medium, High) and numeric pH level from your soil test report.</p>
+                    
+                    <form id="soilForm" onsubmit="return false;">
+                        <div class="soil-inputs-row">
+                            <div class="form-group">
+                                <label for="nitrogenSelect">Nitrogen (N)</label>
+                                <select id="nitrogenSelect" class="styled-select N-input">
+                                    <option value="low">Low (Deficient)</option>
+                                    <option value="medium" selected>Medium (Optimal)</option>
+                                    <option value="high">High (Excess)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="phosphorusSelect">Phosphorus (P)</label>
+                                <select id="phosphorusSelect" class="styled-select P-input">
+                                    <option value="low" selected>Low (Deficient)</option>
+                                    <option value="medium">Medium (Optimal)</option>
+                                    <option value="high">High (Excess)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="potassiumSelect">Potassium (K)</label>
+                                <select id="potassiumSelect" class="styled-select K-input">
+                                    <option value="low">Low (Deficient)</option>
+                                    <option value="medium" selected>Medium (Optimal)</option>
+                                    <option value="high">High (Excess)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phInput">Soil pH Level (Range: 3.5 - 9.5)</label>
+                            <div class="slider-container">
+                                <input type="range" id="phInput" min="3.5" max="9.5" step="0.1" value="6.5" class="styled-slider">
+                                <div class="slider-badges">
+                                    <span>Acidic (3.5)</span>
+                                    <span class="ph-current-badge" id="phValueBadge">6.5 Neutral</span>
+                                    <span>Alkaline (9.5)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="analyzeSoilBtn" class="btn btn-primary btn-block">Analyze and Generate Prescription</button>
+                    </form>
+                </div>
+
+                <!-- Output Panel -->
+                <div class="soil-results-panel glass-card" id="soilResultsPanel">
+                    <div class="results-placeholder" id="soilPlaceholder">
+                        <div class="placeholder-icon">🔬</div>
+                        <h4>Awaiting Laboratory Values</h4>
+                        <p>Fill in the soil parameters on the left and click "Analyze" to generate a tailored biological soil health amendment guide.</p>
+                    </div>
+
+                    <div class="results-content hidden" id="soilResultsContent">
+                        <div class="results-header">
+                            <div class="soil-health-index">
+                                <span class="shi-title">Soil Health Score</span>
+                                <span class="shi-value" id="soilScoreVal">85%</span>
+                            </div>
+                            <div>
+                                <h4 id="soilClassification">Slightly Acidic - Ideal Soil</h4>
+                                <p class="report-id">Report Reference: #AS-SOIL-TEMP</p>
+                            </div>
+                        </div>
+
+                        <div class="prescriptions-list">
+                            <!-- N Prescription -->
+                            <div class="prescription-item" id="nPrescription">
+                                <div class="p-header">
+                                    <span class="p-badge n-badge">N</span>
+                                    <h5>Nitrogen Management</h5>
+                                </div>
+                                <p class="p-text" id="nPrescText">Loading Nitrogen recommendation...</p>
+                            </div>
+
+                            <!-- P Prescription -->
+                            <div class="prescription-item" id="pPrescription">
+                                <div class="p-header">
+                                    <span class="p-badge p-badge-color">P</span>
+                                    <h5>Phosphorus Management</h5>
+                                </div>
+                                <p class="p-text" id="pPrescText">Loading Phosphorus recommendation...</p>
+                            </div>
+
+                            <!-- K Prescription -->
+                            <div class="prescription-item" id="kPrescription">
+                                <div class="p-header">
+                                    <span class="p-badge k-badge">K</span>
+                                    <h5>Potassium Management</h5>
+                                </div>
+                                <p class="p-text" id="kPrescText">Loading Potassium recommendation...</p>
+                            </div>
+
+                            <!-- pH Adjustment -->
+                            <div class="prescription-item" id="phPrescription">
+                                <div class="p-header">
+                                    <span class="p-badge ph-badge">pH</span>
+                                    <h5>Acidity / Alkalinity Adjustment</h5>
+                                </div>
+                                <p class="p-text" id="phPrescText">Loading pH adjustment...</p>
+                            </div>
+                        </div>
+
+                        <!-- Recommendations Box -->
+                        <div class="soil-recs-box alert-box success">
+                            <span class="alert-icon">🌱</span>
+                            <div class="recs-body">
+                                <h6>Recommended Organic Fertilizers:</h6>
+                                <p id="organicAmdList">Bone meal, oil cakes, compost tea, rock phosphate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Government Schemes Section -->
+        <section id="schemes" class="section schemes-section">
+            <div class="section-header">
+                <span class="section-tag">Financial Assistance</span>
+                <h2>Government Agricultural Schemes</h2>
+                <p class="section-subtitle">Access details on major policies supporting organic conversion, soil card implementation, and insurance.</p>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="schemes-controls glass-card">
+                <div class="search-box">
+                    <input type="text" id="schemeSearch" placeholder="Search schemes by name or keywords..." class="styled-input">
+                </div>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All Schemes</button>
+                    <button class="filter-btn" data-category="organic">Organic Farming</button>
+                    <button class="filter-btn" data-category="soil">Soil & Land Health</button>
+                    <button class="filter-btn" data-category="subsidy">Financial & Subsidies</button>
+                </div>
+            </div>
+
+            <!-- Schemes Cards Grid -->
+            <div class="schemes-grid" id="schemesGrid">
+                <!-- Cards injected by JS -->
+            </div>
+
+            <!-- Interactive Eligibility Checker -->
+            <div class="interactive-container glass-card check-eligibility-container">
+                <div class="interactive-header">
+                    <h3>Scheme Eligibility Quick Checker</h3>
+                    <p>Enter your details below to find schemes you may qualify for.</p>
+                </div>
+                <div class="checker-inputs">
+                    <div class="form-group">
+                        <label for="farmerType">Farmer Category</label>
+                        <select id="farmerType" class="styled-select">
+                            <option value="small">Small & Marginal (Area &lt; 2 Hectares)</option>
+                            <option value="large">Large / Commercial (Area &gt; 2 Hectares)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="farmingPractice">Farming Practice</label>
+                        <select id="farmingPractice" class="styled-select">
+                            <option value="organic">Organic / Natural Farming</option>
+                            <option value="chemical">Conventional / Chemical Farming</option>
+                            <option value="mixed">Mixed / Transitioning</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="soilCardStatus">Soil Health Card Available?</label>
+                        <select id="soilCardStatus" class="styled-select">
+                            <option value="yes">Yes, I hold a card</option>
+                            <option value="no">No, I do not have a card</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn-center">
+                    <button id="checkEligibilityBtn" class="btn btn-primary">Check Eligible Schemes</button>
+                </div>
+                <div id="eligibilityResults" class="eligibility-results hidden">
+                    <h5>Your Eligible Schemes:</h5>
+                    <div id="eligibleList" class="eligible-list">
+                        <!-- Eligible schemes cards -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>🌿 AgriSustain</h3>
+                <p>Developing state-of-the-art agricultural information systems for green agricultural practices, empowering farmers and restoring agricultural ecosystems.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Core Tools</h4>
+                <ul>
+                    <li><a href="#soil">Soil Prescriptions</a></li>
+                    <li><a href="#organic">Organic Converter</a></li>
+                    <li><a href="#schemes">Government Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>References</h4>
+                <ul>
+                    <li><a href="https://www.fao.org/organic-ag/en/" target="_blank" rel="noopener">FAO Organic Agriculture</a></li>
+                    <li><a href="https://soilhealth.dac.gov.in/" target="_blank" rel="noopener">Soil Health Card Portal</a></li>
+                    <li><a href="https://www.mygov.in/" target="_blank" rel="noopener">India Agricultural Schemes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AgriSustain. Built with Azure AI Integration and Modern Web Standards.</p>
+        </div>
+    </footer>
+
+    <!-- Simulated Azure Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbotWidget">
+        <!-- Floating Chat Icon -->
+        <button class="chat-launcher-btn" id="chatLauncherBtn" aria-label="Open AgriAssist Chatbot">
+            <span class="chat-icon">💬</span>
+            <span class="chat-badge pulse">1</span>
+        </button>
+
+        <!-- Chat Container -->
+        <div class="chat-container glass-card hidden" id="chatContainer">
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="chat-avatar-info">
+                    <div class="chat-avatar">
+                        🤖
+                        <span class="online-indicator"></span>
+                    </div>
+                    <div>
+                        <h4>AgriAssist AI</h4>
+                        <span class="azure-brand">Powered by Azure AI</span>
+                    </div>
+                </div>
+                <button class="chat-close-btn" id="chatCloseBtn" aria-label="Close Chat">&times;</button>
+            </div>
+
+            <!-- Messages Area -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-bubble">
+                        Hello! I am <strong>AgriAssist AI</strong>, your Azure-integrated agricultural advisor. How can I help you today?
+                    </div>
+                </div>
+                <div class="message bot">
+                    <div class="message-bubble">
+                        You can ask me about composting, pest solutions, crop rotation suggestions, soil sampling, or details of government schemes.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator hidden" id="typingIndicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Quick Suggestions -->
+            <div class="chat-suggestions" id="chatSuggestions">
+                <button class="suggestion-chip">How do I transition to Organic Farming?</button>
+                <button class="suggestion-chip">How do I take a soil sample?</button>
+                <button class="suggestion-chip">Tell me about PM-KISAN scheme</button>
+                <button class="suggestion-chip">Organic remedies for Aphids</button>
+            </div>
+
+            <!-- Input Bar -->
+            <div class="chat-input-bar">
+                <input type="text" id="chatInputField" placeholder="Type agricultural query..." aria-label="Agricultural query">
+                <button id="sendChatBtn" aria-label="Send Message">
+                    <svg viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="app.js"></script>
+</body>
+</html>
